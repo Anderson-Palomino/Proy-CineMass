@@ -1,79 +1,32 @@
-/* Estilos del chat-bot */
 .chat-bot-container {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 300px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
+    bottom: 10px;
+    right: 10px;
+    width: 25%; /* El chatbot ocupará el 25% de ancho de la página */
+    max-width: 400px; /* Máximo ancho */
+    min-width: 250px; /* Mínimo ancho */
+    height: 30vh; /* Altura basada en el 30% del tamaño de la ventana */
+    max-height: 500px; /* Máxima altura */
+    min-height: 300px; /* Mínima altura */
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
     overflow: hidden;
-    font-family: Arial, sans-serif;
-    background-color: #fff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-.chat-header {
-    background-color: #004080;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-    font-weight: bold;
+    z-index: 1000;
 }
 
 .chat-body {
-    max-height: 400px;
-    overflow-y: auto;
+    height: calc(100% - 50px); /* Ajustar dejando espacio para el encabezado */
+    overflow-y: auto; /* Permitir scroll si es necesario */
+}
+
+.chat-header {
+    height: 50px; /* Tamaño fijo para el encabezado */
+    background-color: #007bff;
+    color: white;
+    text-align: center;
     padding: 10px;
-    background-color: #f4f4f4;
+    font-size: 1rem;
+    font-weight: bold;
 }
-
-.chat-message {
-    margin: 10px 0;
-}
-
-.chat-message.user {
-    text-align: right;
-}
-
-.chat-message.bot {
-    text-align: left;
-}
-
-.chat-message p {
-    display: inline-block;
-    padding: 10px;
-    border-radius: 10px;
-    max-width: 80%;
-}
-
-.chat-message.user p {
-    background-color: #0066cc;
-    color: #fff;
-}
-
-.chat-message.bot p {
-    background-color: #ddd;
-    color: #000;
-}
-
-.options {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-}
-
-.options button {
-    background-color: #004080;
-    color: #fff;
-    padding: 10px;
-    margin: 5px 0;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.options button:hover {
-    background-color: #0066cc;
-}
-
-
