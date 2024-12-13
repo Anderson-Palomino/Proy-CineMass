@@ -1,7 +1,7 @@
 <%@ page import="javax.servlet.http.HttpSession" %>
 <%@ page import="modelo.dto.Customer" %>
 <%
-    // Obtener el cliente desde la sesión
+    // Obtener el cliente desde la sesiï¿½n
     Customer customer = (Customer) session.getAttribute("customer");
     String userEmail = (customer != null) ? customer.getCorreo() : "";
 %>
@@ -9,6 +9,7 @@
     <head>
         <title>Opciones de Pago</title>
         <link href="resources/css/inicio.css" rel="stylesheet" type="text/css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <style>
             body {
                 font-family: Arial, sans-serif;
@@ -97,7 +98,7 @@
         <jsp:include page="components/encabezado.jsp"/>
 
         <div class="payment-container">
-            <h2>Seleccione su método de pago</h2>
+            <h2>Seleccione su mï¿½todo de pago</h2>
             <div class="payment-method" id="payment-visa">
                 <img src="${pageContext.request.contextPath}/resources/img/payments/payment_visa.png" alt="Visa">
                 <span>Pago con Visa</span>
@@ -114,11 +115,11 @@
             <div class="payment-form" id="card-form">
                 <h3>Ingrese los datos de su tarjeta</h3>
                 <form id="payment-form" action="procesarPago.jsp" method="post">
-                    <label for="card-number">Número de tarjeta:</label>
+                    <label for="card-number">Nï¿½mero de tarjeta:</label>
                     <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" required>
                     <label for="card-name">Nombre en la tarjeta:</label>
                     <input type="text" id="card-name" name="card-name" placeholder="Nombre Apellido" required>
-                    <label for="card-expiry">Fecha de expiración:</label>
+                    <label for="card-expiry">Fecha de expiraciï¿½n:</label>
                     <input type="text" id="card-expiry" name="card-expiry" placeholder="MM/AA" required>
                     <label for="card-cvv">CVV:</label>
                     <input type="text" id="card-cvv" name="card-cvv" placeholder="123" required>
@@ -128,8 +129,8 @@
             </div>
 
             <div class="qr-image" id="qr-image">
-                <h3>Escanea el código QR para pagar en efectivo</h3>
-                <img src="${pageContext.request.contextPath}/resources/img/payments/qr_yape.jpg" alt="Código QR">
+                <h3>Escanea el cï¿½digo QR para pagar en efectivo</h3>
+                <img src="${pageContext.request.contextPath}/resources/img/payments/qr_yape.jpg" alt="Cï¿½digo QR">
             </div>
         </div>
 
@@ -188,4 +189,5 @@
             }
         </script>
     </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </html>
