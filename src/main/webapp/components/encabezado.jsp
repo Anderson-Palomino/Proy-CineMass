@@ -1,4 +1,7 @@
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WpOoh77ENJvniRxdKpbfbitzQ3uH+mpombsLlDosJNqDNJjHlBXlzE81jDIpD5z" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-PJ6ckfw5SIhAy6eMfIGhtKkDxOnx5CXa9/oM/TX8MEcBgvktw5IBDRU96uMpThvC" crossorigin="anonymous"></script>
 <%@ page pageEncoding="UTF-8" %>
 <%
     request.setCharacterEncoding("UTF-8");
@@ -12,29 +15,38 @@
 %>
 <header>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <nav>
-        <ul>
-            <li><a href="market.jsp">Tienda</a></li>
-            <li><a href="Cubiculos.jsp">Cubiculos</a></li>
-            <li><a href="acercade.jsp">Acerca de</a></li>
-            <li><a href="Contactenos.jsp">Contacto</a></li>
-            <li><a href="locales.jsp">Locales</a></li>
-        </ul>
-        <div class="logo"><a href="Inicio.jsp">ENCHUFATE</a></div>
-        <div class="auth-cart">
-            <button class="btnnavbar btn-color" style="padding: 0px 16px; cursor: pointer; height: 36px">
-                <%= isLoggedIn ? welcomeMessage : "<a href='login.jsp'>" + welcomeMessage + "</a>"%>
-            </button>
-            <% if (isLoggedIn) { %>
-            <button class="btnnavbar btn-color" style="padding: 0px 16px; cursor: pointer; height: 36px">
-                <a href="logout">Cerrar sesión</a>
-            </button>
-            <% }%>   
-            <a href="cntCarrito?action=view"><img src="${pageContext.request.contextPath}/resources/img/inicio/CarroCompra.png" alt="">Carrito de compras</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="Inicio.jsp">ENCHUFATE</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="market.jsp">Tienda</a></li>
+                <li class="nav-item"><a class="nav-link" href="Cubiculos.jsp">Cubiculos</a></li>
+                <li class="nav-item"><a class="nav-link" href="acercade.jsp">Acerca de</a></li>
+                <li class="nav-item"><a class="nav-link" href="Contactenos.jsp">Contacto</a></li>
+                <li class="nav-item"><a class="nav-link" href="locales.jsp">Locales</a></li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <%= isLoggedIn ? welcomeMessage : "<a class='nav-link' href='login.jsp'>" + welcomeMessage + "</a>"%>
+                </li>
+                <% if (isLoggedIn) { %>
+                    <li class="nav-item">
+                        <a class="nav-link" href="logout">Cerrar sesión</a>
+                    </li>
+                <% }%>
+                <li class="nav-item">
+                    <a class="nav-link" href="cntCarrito?action=view"><img src="${pageContext.request.contextPath}/resources/img/inicio/CarroCompra.png" alt="" width="20px"> Carrito de compras</a>
+                </li>
+            </ul>
         </div>
-    </nav>
-        <link href="resources/css/chatbot.css" rel="stylesheet" type="text/css"/>
-        <script src="${pageContext.request.contextPath}/resources/scrip/chat-bot.js"></script>
+    </div>
+</nav>
+    <link href="resources/css/chatbot.css" rel="stylesheet" type="text/css"/>
+    <script src="${pageContext.request.contextPath}/resources/scrip/chat-bot.js"></script>
         <div class="chat-bot-container" id="chatBot">
         <div class="chat-header">EnchufateBot</div>
         <div class="chat-body" id="chatBody">
