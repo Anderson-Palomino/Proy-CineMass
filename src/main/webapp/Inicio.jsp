@@ -29,31 +29,31 @@
             <!-- Nueva Sección de Cubículos -->
             <section class="cubicles py-5 bg-light">
 
-                <h2 class="text-center mb-5">Servicio de Cubículo</h2>
+                <h2 class="text-center mb-5">Salas</h2>
 
                 <div class="cubicle-container d-flex justify-content-around flex-wrap">
 
                     <div class="cubicle text-center shadow-sm mb-4">
 
-                        <img src="${pageContext.request.contextPath}/resources/img/inicio/Normal.png" class="img-fluid rounded mb-3" alt="Cubículo General">
+                        <img src="${pageContext.request.contextPath}/resources/img/inicio/SalaNormal.jpg" class="img-fluid rounded mb-3" alt="Cubículo General">
 
-                        <h3 class="h5">Cubículo General</h3>
+                        <h3 class="h5">Sala General</h3>
 
                         <p class="text-muted mb-0">S/. 5 x hora</p>
                     </div>
                     <div class="cubicle text-center shadow-sm mb-4">
 
-                        <img src="${pageContext.request.contextPath}/resources/img/inicio/VIP.png" class="img-fluid rounded mb-3" alt="Cubículo VIP">
+                        <img src="${pageContext.request.contextPath}/resources/img/inicio/SalaVip.webp" class="img-fluid rounded mb-3" alt="Cubículo VIP">
 
-                        <h3 class="h5">Cubículo VIP</h3>
+                        <h3 class="h5">Sala VIP</h3>
 
                         <p class="text-muted mb-0">S/. 8 x hora</p>
                     </div>
                     <div class="cubicle text-center shadow-sm mb-4">
 
-                        <img src="${pageContext.request.contextPath}/resources/img/inicio/VIPUltra.png" class="img-fluid rounded mb-3" alt="Cubículo ULTRA VIP">
+                        <img src="${pageContext.request.contextPath}/resources/img/inicio/SalaUltraVip.webp" class="img-fluid rounded mb-3" alt="Cubículo ULTRA VIP">
 
-                        <h3 class="h5">Cubículo ULTRA VIP</h3>
+                        <h3 class="h5">Sala ULTRA VIP</h3>
 
                         <p class="text-muted mb-0">S/. 12 x hora</p>
                     </div>
